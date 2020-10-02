@@ -1,0 +1,21 @@
+// FIRST LEVEL CONTAINER
+.container {
+  max-width: 80vw;
+  height: 100%;
+  margin: 0 auto;
+}
+
+// FLEX
+
+.flex {
+  display: flex;
+  height: 100%;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.h-center {
+  align-items: center;
+}
