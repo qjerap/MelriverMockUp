@@ -1,0 +1,10 @@
+.main {
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  user-select: none;
+
+  &__banner-container {
+    padding-top: 10rem;
+    height: 50%;
+  }
+}

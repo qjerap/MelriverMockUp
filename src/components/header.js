@@ -9,7 +9,7 @@ const Header = () => {
           <a className="logo" href="/">
             bike
             <br />
-            <span className="span">tomorow</span>
+            <span>tomorow</span>
           </a>
           <div className="menu">
             <span></span>

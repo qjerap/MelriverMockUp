@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "./components/header"
+import Header from "./components/header";
+import Main from "./components/main";
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <div className="intro"></div>
       <Header />
       <nav className="nav"></nav>
-      <main className="main"></main>
+      <Main />
     </div>
   );
 }
