@@ -1,35 +1,30 @@
 import React, { useState } from "react";
-import { ReactComponent as RightArrowBlack } from "../assets/arrow-right.svg";
-import { ReactComponent as RightArrowWhite } from "../assets/arrow-right-white.svg";
+import { ReactComponent as RightArrow } from "../assets/arrow-right.svg";
+
 import "../style/layout/_banner.scss";
 
 const Banner = () => {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <div className="banner">
-      <h2>
-        <div className="line">
-          <span>We craft your tomorow's bike,</span>
-        </div>
+    <div className="container">
+      <section className="main__banner-container flex h-center">
+        <div className="banner">
+          <h2>
+            <div className="line">
+              <span>We craft your tomorow's bike,</span>
+            </div>
 
-        <div className="line">
-          <span>driven by technology.</span>
+            <div className="line">
+              <span>driven by technology.</span>
+            </div>
+          </h2>
+          <a className="banner__more flex h-center" href="/">
+            More about us
+            <RightArrow />
+          </a>
         </div>
-      </h2>
-      <a
-        onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
-        className="banner__more flex h-center"
-        href="/"
-      >
-        More about us
-        {isHover ? (
-          <RightArrowWhite className="right_arrow" />
-        ) : (
-          <RightArrowBlack className="right_arrow" />
-        )}
-      </a>
+      </section>
     </div>
   );
 };

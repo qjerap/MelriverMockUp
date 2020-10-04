@@ -1,0 +1,43 @@
+@import "../abstracts/variables";
+
+.cases {
+  position: relative;
+  cursor: pointer;
+}
+
+// CASE NAVIGATION
+.cases__nav {
+  &__prev,
+  &__next {
+    background-color: rgba($color: $color-white, $alpha: 0.1);
+    position: absolute;
+    bottom: 2rem;
+    z-index: 2;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 5rem;
+  }
+
+  &__prev {
+    left: 3%;
+  }
+  &__next {
+    right: 3%;
+  }
+  &__hidden svg {
+    fill: darken($color: $color-white, $amount: 50) !important;
+    cursor: default;
+  }
+
+  svg {
+    height: 5rem;
+    width: 5rem;
+    fill: $color-white;
+  }
+}
+
+.cases__scroll {
+  display: flex;
+}

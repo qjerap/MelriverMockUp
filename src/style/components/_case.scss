@@ -1,0 +1,41 @@
+@import "../abstracts/variables";
+
+.case__item {
+  background-color: black;
+  position: relative;
+  height: 50vh;
+  width: 33.33%;
+  cursor: pointer;
+
+  &:hover {
+    img {
+      opacity: 0.5;
+    }
+  }
+
+  .case__image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .case__content {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+    color: $color-white;
+    line-height: 4rem;
+
+    h3 {
+      font-size: $medium-font-size;
+      color: darken($color: $color-white, $amount: 10);
+    }
+    h2 {
+      font-size: $large-font-size;
+    }
+  }
+}
