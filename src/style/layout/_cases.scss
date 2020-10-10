@@ -1,9 +1,19 @@
 @import "../abstracts/variables";
 
 .cases {
+  
   position: relative;
   cursor: pointer;
-}
+  width: 100vw;
+  overflow: hidden;
+  transition: transform 0.4s;
+
+  }
+
+  .dropDown {
+    transform: translateY(50vh);
+  }
+  
 
 // CASE NAVIGATION
 .cases__nav {
@@ -18,6 +28,11 @@
     justify-content: center;
     height: 5rem;
     width: 5rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba($color: $color-white, $alpha: 0.15);
+    }
   }
 
   &__prev {
@@ -26,9 +41,13 @@
   &__next {
     right: 3%;
   }
-  &__hidden svg {
-    fill: darken($color: $color-white, $amount: 50) !important;
-    cursor: default;
+  &__hidden {
+    background-color: rgba($color: $color-white, $alpha: 0.1) !important;
+
+    svg {
+      fill: darken($color: $color-white, $amount: 50) !important;
+      cursor: default;
+    }
   }
 
   svg {
@@ -38,6 +57,17 @@
   }
 }
 
+.cases_slider {
+  width: fit-content;
+}
+
 .cases__scroll {
+  width: 6000px;
   display: flex;
+  // flex-wrap: wrap;
+  transition: transform .8s cubic-bezier(.19,.57,.16,.87);
+  // white-space: nowrap;
+  overflow-Y: scroll;
+  // transform: translate3d(0px, 0px, 0px);
+  background-attachment: scroll;
 }

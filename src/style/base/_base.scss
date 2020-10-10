@@ -4,13 +4,26 @@
 *,
 *::after,
 *::before {
+  
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  text-rendering: optimizeLegibility;
+  outline: none;
+  border: none;
+  // overflow: hidden
+  // scroll-behavior: unset;
+  // -webkit-font-smoothing: antialiased;
+
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 html {
   font-size: 62.5%; //1rem - 10px; 10px/16px = 62.5%
+
 
   @include respond(big-desktop) {
     font-size: 75%;
@@ -23,15 +36,27 @@ html {
   } //1rem = 8px; 8px/16px = 50%
 }
 
+html, body {
+  user-select: none;
+  overscroll-behavior: none;
+}
+
+
 body {
+  
+  font-family: "Manrope", sans-serif;
+
+  height: 150vw;
   box-sizing: border-box;
   @include respond(tab-port) {
     padding: 0;
   }
 }
 
+
+
 ::selection {
-  background-color: $color-primary;
+  // background-color: $color-primary;
   color: $color-white;
 }
 

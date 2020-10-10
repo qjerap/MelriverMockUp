@@ -1,11 +1,18 @@
 @import "../abstracts/variables";
 
 .case__item {
+
   background-color: black;
   position: relative;
   height: 50vh;
-  width: 33.33%;
+  width: 33.3333333333vw;
+  overflow: hidden;
   cursor: pointer;
+
+
+  &:last-child {
+    width: 35vw;
+  }
 
   &:hover {
     img {
@@ -15,11 +22,15 @@
 
   .case__image {
     position: absolute;
+    perspective: 1000px;
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
-    transition: opacity 0.5s ease-in-out;
+    transform: scale(1.5);
+    animation: ZoomOut 1s forwards;
+    animation-delay: 4.2s;
+    transition: all 0.5s ease-in-out;
   }
 
   .case__content {
@@ -37,5 +48,21 @@
     h2 {
       font-size: $large-font-size;
     }
+  }
+}
+
+.case__item:nth-child(2) .case__image {
+  animation-delay: 4.5s;
+}
+
+.case__item:nth-child(3) .case__image {
+  animation-delay: 4.8s;
+}
+@keyframes ZoomOut {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
   }
 }

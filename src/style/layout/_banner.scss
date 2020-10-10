@@ -2,14 +2,20 @@
 
 .banner {
   width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  transition: transform 0.3s;
+
 
   h2 {
+    position: relative;
     cursor: default;
-    font-size: $xlarge-font-size;
-    font-weight: 400;
-    line-height: 6.5rem;
-    margin-bottom: 3.45rem;
-    letter-spacing: -2px;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    // margin-bottom: 2.45rem;
+    letter-spacing: 1px;
     color: $color-white;
     mix-blend-mode: difference;
     z-index: 10;
@@ -17,22 +23,21 @@
 
   .line {
     position: relative;
-    margin-bottom: 8px;
-    height: 5.6rem;
+    margin-bottom: 0px;
+    height: 7rem;
     overflow: hidden;
+    z-index: 10;
+    display: flex;
+    align-items: center;
   }
-
   span {
     position: absolute;
-    // top: 6rem;
-    // transition: 0.4s;
+    z-index: 10;
   }
 
-  //   .line:hover span {
-  //       top: 0;
-  //   }
-
   &__more {
+    position: absolute;
+    top: calc(var(--vh, 1vh) * 12);
     font-size: 2.35rem;
     letter-spacing: -1.5px;
     width: fit-content;
@@ -55,4 +60,8 @@
       }
     }
   }
+}
+
+.dropDown {
+  transform: translateY(50vh);
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import "../style/layout/_header.scss";
 
-const Header = () => {
+const Header = (props) => {
+  console.log(props);
   return (
     <div className="header">
       <div className="container">
@@ -11,7 +12,7 @@ const Header = () => {
             <br />
             <span>tomorow</span>
           </a>
-          <div className="menu">
+          <div className="menu" onClick={props.showMenu}>
             <span></span>
             <span></span>
           </div>
